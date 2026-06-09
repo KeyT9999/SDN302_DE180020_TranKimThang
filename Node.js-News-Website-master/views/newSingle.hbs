@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <div class="news-single">
+        <a href="/">&larr; Back</a>
+
+        {{#if article}}
+            <h2>{{article.title.rendered}}</h2>
+            <p>{{{article.content.rendered}}}</p>  <!-- Triple curly braces for rendering raw HTML -->
+        {{else}}
+            <p>No posts found.</p>
+        {{/if}}
+    </div>
+</div>

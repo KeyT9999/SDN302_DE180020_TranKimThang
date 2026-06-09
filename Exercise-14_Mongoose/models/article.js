@@ -20,6 +20,11 @@ const articleSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Author is required']
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: [true, 'User is required']
+  },
   content: String,
   tags: [String],
   category: {

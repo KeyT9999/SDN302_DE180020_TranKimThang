@@ -1,0 +1,15 @@
+<div class="wrapper">
+    <div class="news">
+        {{#if articles}}
+            {{#each articles}}
+                <a href="/news/{{id}}" class="news__card">
+                    <img src="{{thumbnail_url}}" alt="{{title.rendered}}">
+                    <h2>{{title.rendered}}</h2>
+                    <p>{{{excerpt.rendered}}}</p> <!-- Use triple brackets for HTML -->
+                </a>
+            {{/each}}
+        {{else}}
+            <p>No news available.</p>
+        {{/if}}
+    </div>
+</div>
